@@ -1,152 +1,68 @@
-function schetchik1() {
-    let count = 0;
+// Корсак и Давтян 264-272
 
-    return function() {
-        count++;
-        console.log(Функция вызвана ${count} раз);
-    }
-        const counter = createCounter();
-          
-        counter();
-        counter(); 
-        counter();
-        counter();
+// 1
+// ВЫВЕДЕТ !
 
+// 2
+// ВЫВЕДЕТ ОШИБКУ
 
-function schetchik2() {
-    let count = 10;
-    return function() {
-    count--;
-    console.log(осталось вызвать функцию ${count} раз);
-        }
-          }
-          
-    const counter = schetchik2();
-          
-    counter();
-    counter();
-    counter();
-    counter();
+// 3
+// ВЫВЕДЕТ !
 
+// 4
+// ВЫВЕДЕТ return '!'
 
-function schetchik3() {
-    let count = 10;
-    return function() {
-        if (count > 0) {
-        count--;
-        console.log(осталось вызвать функцию ${count} раз);
-          } else {
-            console.log(Отсчет окончен);
-          }
-        }
-      }
-      
-      const counter = createCounter();
-      
-      counter(); 
-      counter(); 
+// 5
+// ВЫВЕДЕТ !
 
+// 6
+// ВЫВЕДЕТ 3
 
-function func() {
-	let num = 0;
-	
-	return function() {
-		console.log(num);
-		num++;
-	};
-}
+// 7
+// ВЫВЕДЕТ !
 
-func()();
-func()();
-func()();
-ВЫВЕДЕТ 0
+// 8
+// ВЫВЕДЕТ !
 
-function func() {
-	let num = 0;
-	
-	return function() {
-		console.log(num);
-		num++;
-	};
-}
+// 9
+// ВЫВЕДЕТ return '!'
 
-let test = func;
+// 10
+// ВЫВЕДЕТ !
 
-test()();
-test()();
-test()();
-ВЫВЕДЕТ 0
+// 11
+// ВЫВЕДЕТ 3
 
-
-let counter = 0;
-		
-function test() {
-	return function() {
-		console.log(counter);
-		counter++;
-	};
-}
-
-let func = test;
-
-let func1 = func();
-let func2 = func();
-func1();
-func2();
-func1();
-func2();
-ВЫВЕДЕТ
-0
-1
-2
-3
-
-function test() {
-	let counter = 0;
-	
-	return function() {
-		return function() {
-			console.log(counter);
-			counter++;
-		};
-	};
-}
-
-let func = test()();
-
-let func1 = func;
-let func2 = func;
-func1();
-func2();
-func1();
-func2();
-ВЫВЕДЕТ
-0
-1
-2
-3
-
-function test() {
-	let counter = 0;
-	
-	return function() {
-		return function() {
-			console.log(counter);
-			counter++;
-		};
-	};
-}
-
-let func = test();
-
-let func1 = func();
-let func2 = func();
-func1();
-func2();
-func1();
-func2();
-ВЫВЕДЕТ
-0
-1
-2
-3
+// 12 
+// (function() { 
+//  return function() { 
+//      return function() { 
+//          console.log('!'); 
+// }; 
+// }; 
+// })()()(); 
+ 
+// 13 
+// (function() { 
+//   let sum = 0; 
+//   return function(num) { 
+//     sum += num; 
+//     console.log('Сумма: ' + sum); 
+//   } 
+// })(1)(2); 
+ 
+// 14 
+// (function() { 
+//     let sum = 0; 
+//     return function(num) { 
+//       sum += num; 
+//       console.log('Сумма: ' + sum); 
+//       return arguments.callee; 
+//     } 
+// })()(1)(2)(3); 
+ 
+// 15 
+// ВЫВЕДЕТ 1 
+ 
+// 16 
+// ВЫВЕДЕТ ОШИБКУ
